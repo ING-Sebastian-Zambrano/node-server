@@ -8,16 +8,6 @@ const mostrarMenu =  () => {
     return new Promise ( resolve => {
 
         console.clear();
-        console.log('================================');
-        console.log('Seleccione una Opción');
-        console.log('================================\n');
-
-
-        console.log('1. Crear Tarea'); 
-        console.log('2. Ver Tareas'); 
-        console.log('3. Comletar Tarea'); 
-        console.log('4. Eliminar Tareas'); 
-        console.log('Salir \n'); 
 
         const readline = require('readline').createInterface({
             input: process.stdin,
