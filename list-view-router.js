@@ -36,14 +36,26 @@ const tareas = new Tareas();
 // Cargar las tareas desde el archivo al iniciar el servidor
 tareas.cargarTareasFromArray(leerTareasDesdeArchivo());
 
-// Ruta para obtener la lista de tareas completas
-app.get('/tareas/completas', (req, res) => {
+// Middleware para gestionar la validez de los parámetros
+const validarParametros = (req, res, next) => {
+  const { parametro1, parametro2 } = req.params;
+
+  // Verificar que los parámetros estén presentes y sean válidos
+  if (!parametro1 || !parametro2 || isNaN(parametro2)) {
+    return res.status(400).send('Parámetros incorrectos.'); // Responder con un código de estado 400 y un mensaje de error
+  }
+
+  next();
+};
+
+// Ruta para obtener la lista de tareas completas con parámetros
+app.get('/tareas/completas/:parametro1/:parametro2', validarParametros, (req, res) => {
   const tareasCompletas = tareas.listadoArr.filter(tarea => tarea.completadoEn !== null);
   res.json(tareasCompletas);
 });
 
-// Ruta para obtener la lista de tareas incompletas
-app.get('/tareas/incompletas', (req, res) => {
+// Ruta para obtener la lista de tareas incompletas con parámetros
+app.get('/tareas/incompletas/:parametro1/:parametro2', validarParametros, (req, res) => {
   const tareasIncompletas = tareas.listadoArr.filter(tarea => tarea.completadoEn === null);
   res.json(tareasIncompletas);
 });

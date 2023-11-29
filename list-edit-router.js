@@ -31,6 +31,18 @@ const guardarTareasEnArchivo = (tareas) => {
 const tareas = new Tareas();
 tareas.cargarTareasFromArray(leerTareasDesdeArchivo());
 
+// Middleware para manejar errores en solicitudes POST con el cuerpo vacío
+const validatePostRequestBody = (req, res, next) => {
+  if (req.method === 'POST' && Object.keys(req.body).length === 0) {
+    return res.status(400).json({ error: 'El cuerpo de la solicitud no puede estar vacío.' });
+  }
+  next();
+};
+
+// Aplicar middleware de validación del cuerpo de la solicitud para las solicitudes POST
+app.use(validatePostRequestBody);
+
+
 // Ruta para crear una nueva tarea
 app.post('/tareas', (req, res) => {
   const { desc } = req.body;
@@ -45,7 +57,7 @@ app.post('/tareas', (req, res) => {
 });
 
 // Ruta para eliminar una tarea por su ID
-app.delete('/tareas/:id', (req, res) => {
+app.delete('/tareasB/:id', (req, res) => {
   const { id } = req.params;
 
   if (!id) {
@@ -91,5 +103,5 @@ app.listen(port, () => {
 
 
 // Crear Tareas:  http://localhost:3000/tareas
-// Borrar Tarea: http://localhost:3000/tareas/{id}, donde {id} es el ID de la tarea que desea eliminar
+// Borrar Tarea: http://localhost:3000/tareasB/{id}, donde {id} es el ID de la tarea que desea eliminar
 // Actulizar Tarea: http://localhost:3000/tareas/{id}, donde {id} es el ID de la tarea que desea actualizar
