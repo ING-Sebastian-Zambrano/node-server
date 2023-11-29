@@ -29,20 +29,20 @@ const main = async() => {
        opt = await inquirerMenu(); 
        
        switch (opt) {
-           case '1':
+           case '1': //Agregar a lista de Tareas
                 const desc = await leerInput('Descripción: ');
                 tareas.crearTarea(desc);  
             break;
 
-            case '2':
+            case '2':  //Lista de Tareas Completo
                 tareas.listadoCompleto();
             break;  
 
-            case '3':  //listar completadas
+            case '3':  //Lista de Tareas Completadas
                 tareas.listarPendientesCompletadas(true);
             break;   
 
-            case '4':  //listar pendientes
+            case '4':  //Lista de Tareas Pendientes
                 tareas.listarPendientesCompletadas(false);    
             break; 
 

@@ -1,1 +1,43 @@
-[{"id":"b8b737f0-b2da-48c4-adb0-46355342d2ed","desc":"cenar","completadoEn":"2021-06-22T01:54:02.731Z"},{"id":"23065fd7-9d4f-4787-ab29-63b87e66be88","desc":"correr","completadoEn":"2021-06-22T01:54:02.731Z"},{"id":"cfee05e3-f835-4d36-9fb9-f9d7b29ae5b7","desc":"cocinar","completadoEn":"2023-11-14T19:01:47.310Z"},{"id":"13950e70-bb0b-4b3d-a45b-0ee4eebe9e51","desc":"dormir","completadoEn":"2023-11-14T19:01:47.310Z"},{"id":"7129edd3-83f1-46cb-a8eb-e345dab7d2b0","desc":"programar","completadoEn":null},{"id":"d942303a-8937-4682-a08d-215d0bff503a","desc":"Barrer","completadoEn":"2023-11-14T19:01:47.310Z"},{"id":"7a2d2133-2d66-4db9-b958-3141be1150a4","desc":"Adelantar todos los pendientes de ADA","completado":null,"completadoEn":null}]
+[
+  {
+    "id": "b8b737f0-b2da-48c4-adb0-46355342d2ed",
+    "desc": "cenar",
+    "completadoEn": "2021-06-22T01:54:02.731Z"
+  },
+  {
+    "id": "23065fd7-9d4f-4787-ab29-63b87e66be88",
+    "desc": "correr",
+    "completadoEn": "2021-06-22T01:54:02.731Z"
+  },
+  {
+    "id": "cfee05e3-f835-4d36-9fb9-f9d7b29ae5b7",
+    "desc": "cocinar",
+    "completadoEn": "2023-11-14T19:01:47.310Z"
+  },
+  {
+    "id": "13950e70-bb0b-4b3d-a45b-0ee4eebe9e51",
+    "desc": "dormir",
+    "completadoEn": "2023-11-14T19:01:47.310Z"
+  },
+  {
+    "id": "7129edd3-83f1-46cb-a8eb-e345dab7d2b0",
+    "desc": "programar",
+    "completadoEn": null
+  },
+  {
+    "id": "d942303a-8937-4682-a08d-215d0bff503a",
+    "desc": "Barrer",
+    "completadoEn": "2023-11-14T19:01:47.310Z"
+  },
+  {
+    "id": "7a2d2133-2d66-4db9-b958-3141be1150a4",
+    "desc": "Adelantar todos los pendientes de ADA",
+    "completado": null,
+    "completadoEn": null
+  },
+  {
+    "id": "bdba049e-085a-424f-b4b1-b2aa084f5908",
+    "desc": "Nueva tarea desde Postman",
+    "completado": null
+  }
+]
