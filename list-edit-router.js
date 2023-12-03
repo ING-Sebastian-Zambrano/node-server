@@ -102,15 +102,3 @@ app.listen(port, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);
 });
 
-//Comando para poder editar las tareas en Postman
-
-
-// Crear Tareas:  http://localhost:3000/tareas
-// Borrar Tarea: http://localhost:3000/tareas/{id}, donde {id} es el ID de la tarea que desea eliminar
-// Actulizar Tarea: http://localhost:3000/tareas/{id}, donde {id} es el ID de la tarea que desea actualizar
-// Proceso de autenticacion: http://localhost:3000/login
-//                    {
-//                      "usuario": "usuario1",       ==> el usuario es usuario1
-//                      "contrasena": "contrasena1"  ==> la contraseña es contrasena1
-//                    }
-//Ruta proteguida: http://localhost:3000/ruta-protegida
