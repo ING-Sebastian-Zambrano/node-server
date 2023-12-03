@@ -1,0 +1,1 @@
+El archivo **data.json** actúa como un almacenamiento persistente para las tareas de la aplicación. Esto significa que incluso después de cerrar y reiniciar la aplicación, las tareas anteriores se mantienen y pueden recuperarse desde este archivo. Es una forma sencilla de lograr cierta persistencia de datos sin necesidad de una base de datos más compleja.
